@@ -1,11 +1,11 @@
 
 
 #!/bin/bash
-# run: source <(curl -s https://raw.githubusercontent.com/qrpike/CentOS-6-Quick-Install-Scripts/master/installOpenVZ.sh)
+# run: source <(curl -s https://github.com/domecca/CentOS-7-OpenVZ/blob/main/install.sh)
 
 
 clear
-echo 'Going to install OpenVZ for you..'
+echo 'Going to install OpenVZ on Centos 7 for you..'
 
 echo 'installing wget..'
 yum install -y wget
@@ -35,7 +35,7 @@ echo 'net.ipv4.conf.default.forwarding=1' >> /etc/sysctl.conf
 # Default to Ploop & CentOS 6 - x86_64
 sed -i 's/#NEIGHBOUR_DEVS=all/NEIGHBOUR_DEVS=all/g' /etc/vz/vz.conf
 sed -i 's/#VE_LAYOUT=ploop/VE_LAYOUT=ploop/g' /etc/vz/vz.conf
-sed -i 's/centos-6-x86/centos-6-x86_64/g' /etc/vz/vz.conf
+sed -i 's/centos-7-x86/centos-7-x86_64/g' /etc/vz/vz.conf
 
 
 echo 'Done with that, purging your sys configs'
