@@ -1,7 +1,7 @@
 
 
 #!/bin/bash
-# run: source <(curl -s https://github.com/domecca/CentOS-7-OpenVZ/blob/main/install.sh)
+# run: source <(curl -s https://raw.githubusercontent.com/domecca/CentOS-7-OpenVZ/main/install.sh --insecure)
 
 
 clear
