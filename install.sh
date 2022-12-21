@@ -10,7 +10,7 @@ echo 'Going to install OpenVZ on Centos 7 for you..'
 echo 'installing wget..'
 yum install -y wget
 
-echo 'now adding openvz Repo'
+echo 'now adding OpenVZ Repo'
 wget -P /etc/yum.repos.d/ http://ftp.openvz.org/openvz.repo
 rpm --import http://ftp.openvz.org/RPM-GPG-Key-OpenVZ
 
@@ -32,7 +32,7 @@ echo 'net.ipv4.icmp_echo_ignore_broadcasts=1' >> /etc/sysctl.conf
 echo 'net.ipv4.conf.default.forwarding=1' >> /etc/sysctl.conf
 
 # Changing default VZ settings:
-# Default to Ploop & CentOS 6 - x86_64
+# Default to Ploop & CentOS 7 - x86_64
 sed -i 's/#NEIGHBOUR_DEVS=all/NEIGHBOUR_DEVS=all/g' /etc/vz/vz.conf
 sed -i 's/#VE_LAYOUT=ploop/VE_LAYOUT=ploop/g' /etc/vz/vz.conf
 sed -i 's/centos-7-x86/centos-7-x86_64/g' /etc/vz/vz.conf
@@ -52,5 +52,4 @@ echo ' - - - - - - - - - - - - - - - - - - - - - - '
 echo ' disable iptables to access VMs:$ /etc/init.d/iptables stop && chkconfig iptables off'
 echo ' - - - - - - - - - - - - - - - - - - - - - - '
 echo ' To download CentOS base template for openvz, run: '
-echo ' cd /vz/template/cache && wget http://download.openvz.org/template/precreated/centos-6-x86_64.tar.gz '
-
+echo ' cd /vz/template/cache && wget http://download.openvz.org/template/precreated/centos-7-x86_64.tar.gz '
